@@ -100,7 +100,7 @@ class MQ(object):
         corrected for temperature/humidity"""
         ratio = self.get_resistance_acohol() / 800
         x = 0.3934 * ratio
-        return math.pow(x,-1.504)
+        return round(math.pow(x,-1.504), 2)
 
 
 def mqlib_example():
